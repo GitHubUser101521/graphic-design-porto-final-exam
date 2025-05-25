@@ -1,10 +1,13 @@
+'use client'
+import { animOpacity } from '@/utils/gsapAnim'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect } from 'react'
 
 export default function Header() {
     const nav = [
         {
-            name: 'Landing',
+            name: 'Home',
             link: '#landing'
         },
         {
@@ -16,6 +19,20 @@ export default function Header() {
             link: '#artist-spotlight'
         }
     ]
+
+    useEffect(() => {
+        const navEl = document.querySelectorAll('.nav')
+        
+        navEl.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                animOpacity(el, 1, 0.5)
+            })
+
+            el.addEventListener('mouseleave', () => {
+                animOpacity(el, 0.5, 1)
+            })
+        })
+    }, [])
 
     return (
         <div className="w-full flex justify-between items-center px-40 py-8 bg-white fixed top-0 shadow-xl">
@@ -32,8 +49,8 @@ export default function Header() {
             <div className='flex gap-6'>
             {
                 nav.map(n => (
-                    <Link href={n.link} key={n.name}>
-                        <p className='hover:font-bold'>
+                    <Link href={n.link} key={n.name} >
+                        <p className='hover:font-bold nav'>
                             { n.name }
                         </p>
                     </Link>
