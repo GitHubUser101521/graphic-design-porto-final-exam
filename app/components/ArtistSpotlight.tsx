@@ -17,8 +17,10 @@ export default function ArtistSpotlight() {
             <h1 className="title">ARTISTS SPOTLIGHT</h1>
 
             <div className="mt-12 bg-sky-50 p-8 rounded-tr-2xl rounded-bl-2xl">
-                <div className="flex gap-8">
-                    <img src="/artist-spotlight/artist.png" />
+                <div className="flex flex-col md:flex-row gap-8">
+                    <div>
+                        <img src="/artist-spotlight/artist.png" />
+                    </div>
 
                     <div className="flex flex-col justify-center gap-4">
                         <h2 className="font-bold text-xl">Luna Evergreen</h2>
@@ -31,7 +33,7 @@ export default function ArtistSpotlight() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-8 mt-8">
+                <div className="grid md:grid-cols-2 gap-8 mt-8">
                 {
                     selectedArt.map(s => (
                         <div key={s.title} className="flex flex-col gap-2">

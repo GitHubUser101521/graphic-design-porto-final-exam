@@ -35,7 +35,7 @@ export default function Header() {
     }, [])
 
     return (
-        <div className="w-full flex justify-between items-center px-40 py-8 bg-white fixed top-0 shadow-xl">
+        <div className="w-full flex flex-col md:flex-row justify-between items-center px-10 lg:px-40 py-4 lg:py-8 bg-white fixed top-0 shadow-xl gap-4">
             <div className='flex items-center gap-4'>
                 <Image 
                     src="/favicon.ico"

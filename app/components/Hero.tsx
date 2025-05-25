@@ -1,9 +1,9 @@
 export default function Hero() {
 
     return (
-        <div id="landing" className="section flex items-center gap-12">
-            <div className="w-3/5">
-                <h1 className="font-bold text-6xl mb-6 heroEl">
+        <div id="landing" className="section flex flex-col-reverse lg:flex-row items-center gap-12">
+            <div className="md:w-3/5">
+                <h1 className="font-bold text-4xl md:text-6xl mb-6 heroEl">
                     Unveiling the mastery behind every pixel's life. 
                 </h1>
                 <p className="text-sm heroEl">

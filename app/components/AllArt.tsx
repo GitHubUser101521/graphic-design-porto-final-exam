@@ -20,7 +20,7 @@ export default function AllArt() {
             <h1 className="title">FEATURED ARTWORK SHOWCASE</h1>
             <p className="sub-title">Stunning digital artworks created by CollectiveArt members.</p>
 
-            <div className="grid grid-cols-5 gap-8 mt-12">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-12">
             {
                 renderArts()
             }
